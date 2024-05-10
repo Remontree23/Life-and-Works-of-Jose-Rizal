@@ -1,0 +1,391 @@
+@font-face {
+  font-family: sail;
+  src: url(Sail-Regular.otf);
+}
+@font-face {
+  font-family: inconsolata;
+  src: url(Inconsolata.otf);
+}
+@font-face {
+  font-family: casta;
+  src: url(Casta-Thin.otf);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family:'Times New Roman', Times, serif;
+}
+body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("img/download.jpeg");
+  background-color:rgb(171, 163, 144);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  
+}
+
+nav {
+  margin-left: 0;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(171, 163, 144);
+  padding-bottom: 5px;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 10px; 
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0px 30px 0px;
+
+}
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+
+a {
+    text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+ul li {
+   
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  font-family: inconsolata;
+}
+ul li a { 
+  display: block;
+  color: #f6f3f0;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+ul li a:hover {
+  box-shadow: inset 0 -2px 0 0 #442e20;
+  color: #442e20;
+}
+
+
+
+/*------ perrrrrsss ------*/
+
+.header {
+  display: flex;
+
+  justify-content: space-around;
+  margin: 120px 25px 50px;
+}
+.portrait {
+  height: 58vh;
+  border-radius: 25px;
+  opacity: 1;
+}
+h1 {
+  font-size: 50px;
+  font-style: oblique;
+}
+.teks {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #d5d5d5;
+}
+h2 {
+  background:rgb(171, 163, 144);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+
+/*---- botawnn ----*/
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color:#d5d5d5;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 83%;
+ 
+  
+}
+
+.btn:hover {
+  background-color: #4c3629;
+  
+}
+
+/*-------- sekand --------*/
+
+.pleks {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -50px;
+  height: 30%;
+  
+}
+
+.image-container {
+  filter: opacity(.8);
+  filter: grayscale(100%);
+  padding: 20px;
+  width: 50%;
+  transition: transform 0.3s ease-in-out;
+  position: relative; 
+}
+
+
+.image-container img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 66vh;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  filter:opacity(20);
+}
+
+.text-container {
+  position: absolute;
+  top: 189%; 
+  left: 0; 
+  right: 0;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 0;
+  text-align: center;
+}
+
+
+
+/*------- thard ---------*/
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 20px 20px 50px;
+  filter: grayscale(50%);
+}
+
+.gallery-text {
+  font-size: 23px;
+  text-align: justify;
+  color: #333;
+  max-width: 50%;
+}
+
+.content{
+  background-color: rgba(220, 220, 220, 0.9);
+  z-index: 1;
+  padding: 2%;
+}
+
+.content h3{
+  font-size: 40px;
+  text-align: center;
+  margin: 90px;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 100px 100px rgba(4, 4, 4, 0.1);
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: rgb(171, 163, 144);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: auto auto;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+  filter: grayscale(50%);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  transition: transform 0.3s ease-out;
+  transform: translateY(100%);
+}
+
+.card-title {
+text-align: center;
+font-size: 20px;
+}
+
+.card:hover .card-image {
+  transform: translateY(-100%);
+}
+
+.card:hover .card-content {
+  transform: translateY(0);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/*------ educhannnn------*/
+.info {
+  padding: 50px;
+  background-color: #f5f5f5;
+  margin-top: 50px;
+}
+
+.info p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.info h2,h3 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+}
+
+.info .school-box {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color:rgba(231, 228, 228, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.info .school-box-image-container {
+  text-align: center;
+}
+
+.info .school-box-image {
+  max-width: 100%;
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
+}
+
+#embed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: inconsolata;
+  background-color: rgb(51, 51, 51);
+  padding: 20px;
+  color: white;
+}
+iframe {
+  margin: 0 auto;
+}
+
+/* Existing CSS */
+
+/* Add the following media query for Android phones */
+@media screen and (max-width: 480px) {
+  .content-container {
+    padding: 40px; /* Adjust padding for smaller screens */
+  }
+  .column-one,
+  .column-two {
+    width: 100%; /* Adjust column width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    text-align: center; /* Center align content */
+  }
+  img {
+    margin: auto; /* Center align images */
+  }
+  .l-font {
+    font-size: 30px; /* Adjust large font size */
+  }
+  .xl-font {
+    font-size: 45px; /* Adjust extra-large font size */
+  }
+  .button {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}

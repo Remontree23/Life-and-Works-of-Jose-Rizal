@@ -1,0 +1,441 @@
+@font-face {
+    font-family: sail;
+    src: url(Sail-Regular.otf);
+}
+@font-face {
+    font-family: inconsolata;
+    src: url(Inconsolata.otf);
+}
+@font-face {
+    font-family: casta;
+    src: url(Casta-Thin.otf);
+}
+.bg1 {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg3 {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("wallpaperflare.com_wallpaper\ \(4\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+nav {
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(171, 163, 144);
+    padding-bottom: 5px;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+  
+  }
+  .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 10px; 
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px 0px;
+  
+  }
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  
+  a {
+      text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+  }
+  ul li {
+     
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    font-family: inconsolata;
+  }
+  ul li a { 
+    display: block;
+    color: #f6f3f0;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  ul li a:hover {
+    box-shadow: inset 0 -2px 0 0 #442e20;
+    color: #442e20;
+  }
+  
+
+.bg1 {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("wallpaperflare.com_wallpaper\ \(8\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg3 {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("bgg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin: 50px 25px 0px;
+    padding: 10px;
+
+}
+h1 {
+    position: relative;
+    float: left;
+    margin: -50px 40px -80px;
+    color: white;
+    font-size: 100px;
+    font-family:sail;  
+    text-shadow: 5px 7px 8px black;                                                                                                                                                          ;
+}
+p {
+    font-size: 35px;
+    color: white;
+    background-color: rgb(102, 66, 43,0.5);
+    padding: 50px;
+    font-family: inconsolata;
+    text-shadow: 2px 2px 4px black;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+    }
+  }
+  
+  
+  section {
+      background: #B08968;
+      filter: sepia(60%);
+      padding: 50px 0;
+  }
+  
+  .container {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .carousel {
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 22px;
+      
+      > input {
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          
+          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+          
+          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(68, 46, 32,0.5); }
+      }
+  }
+  
+  .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+  }
+  
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+      figure {
+          display: flex;
+          margin: 0;
+      }
+      
+      div {
+          @include aspect-ratio(3, 2);
+          width: 100%;
+      }
+      
+      img {
+          display: block;
+          flex: 1 1 auto;
+          object-fit: cover;
+      }
+      
+      figcaption {
+          align-self: flex-end;
+          padding: 20px 20px 0 20px;
+          flex: 0 0 auto;
+          width: 25%;
+          min-width: 150px;
+      }
+      
+      .credit {
+          margin-top: 1rem;
+          color: rgb(46, 27, 13);
+          display: block;   
+
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
+  }
+  
+  .carousel__thumbnails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      
+      margin: 0 -10px;
+      
+      .carousel__slides + & {
+          margin-top: 20px;
+      }
+      
+      li {        
+          flex: 1 1 auto;
+          max-width: calc((100% / 6) - 20px);  
+          margin: 0 10px;
+          transition: all 300ms ease-in-out;
+      }
+      
+      label {
+          display: block;
+          @include aspect-ratio(1,1);
+          
+                    
+          &:hover,
+          &:focus {
+              cursor: pointer;
+              
+              img {
+                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                  transition: all 300ms ease-in-out;
+              }
+          }
+      }
+      
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  }
+
+  .bg2 {
+    background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("peper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+  .place {
+    height: 35vh;
+    border-radius: 5px;
+    filter: blur(1px);
+  }
+.place:hover {
+    filter: none;
+    animation-duration: ease-in-out 5s;
+    transform: scale(1.1);
+}
+  h2 {
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    font-family: casta;
+    font-weight: bolder;
+  }
+  h3 {
+    color: black;
+    font-size: 25px;
+    font-family: inconsolata;
+    text-shadow: 1px 1px 2px gray;
+    margin-top: -15px;
+  }
+  h4 {
+    text-align: right;
+    font-size: 30px;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+    font-family: casta;
+    font-weight: bolder;
+    
+  }
+  h5 {
+    text-align: right;
+    color: black;
+    font-size: 25px;
+    font-family: inconsolata;
+    text-shadow: 1px 1px 2px gray;
+    margin-top: -15px;
+  }
+
+  .bax {
+    display: flex;
+    padding: 20px;
+    gap: 2rem;
+  }
+  .textbaks {
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+  }
+  h6 {
+    font-size: 35px;
+    color: white;
+    font-family: casta;
+    text-align: left;
+    margin:  50px 50px 0px;
+    padding: 5px;
+  }
+  .ngalan {
+    font-size: 30px;
+    margin-left: 70px;
+    padding: 5px;
+    font-family: sail;
+  }
+  .rsn {
+    font-size: 25px;
+    margin-left: 100px ;
+    font-family: inconsolata;
+  }
+  .pips {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    padding: 2px;
+  }
+
+  /* Existing CSS */
+
+/* Add the following media query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide navigation links on small screens */
+  }
+  .logo {
+    height: 40px; /* Adjust logo height */
+    width: 40px; /* Adjust logo width */
+  }
+  h1 {
+    font-size: 60px; /* Adjust heading font size */
+    margin: 20px; /* Adjust heading margin */
+  }
+  p {
+    font-size: 20px; /* Adjust paragraph font size */
+    padding: 20px; /* Adjust paragraph padding */
+  }
+  .header {
+    margin: 20px; /* Adjust header margin */
+  }
+  .bax {
+    flex-direction: column; /* Adjust flex direction */
+    gap: 1rem; /* Adjust gap between elements */
+    padding: 10px; /* Adjust padding */
+  }
+  h6 {
+    font-size: 30px; /* Adjust font size */
+    margin: 20px; /* Adjust margin */
+  }
+  .ngalan {
+    font-size: 25px; /* Adjust font size */
+    margin-left: 20px; /* Adjust margin */
+  }
+  .rsn {
+    font-size: 20px; /* Adjust font size */
+    margin-left: 20px; /* Adjust margin */
+  }
+  .pips {
+    padding: 10px; /* Adjust padding */
+  }
+  .carousel__slide {
+    min-height: 300px; /* Adjust minimum height of carousel slides */
+  }
+}
